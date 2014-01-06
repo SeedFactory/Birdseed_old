@@ -6,7 +6,10 @@ ruby '2.0.0'
 gem 'rails', '4.0.1'
 
 gem 'pg'
-gem 'sqlite3'
+
+group :test do
+	gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
