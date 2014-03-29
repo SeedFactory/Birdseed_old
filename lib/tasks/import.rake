@@ -1,11 +1,17 @@
 task import: :environment do
 
-  client = Mysql2::Client.new(host: 'localhost', user: 'root')
+  client = Mysql2::Client.new(host: '192.168.2.12', user: 'root')
 
-  results = client.query(%[
+  contacts = client.query(%[
     SELECT max(id), * FROM contact_contact GROUP BY email;
   ])
 
-  print results
+  contacts.each do |contact|
+
+    phones = client.query(%[
+      SELECT * from contact_phonenumbers WHERE contact_id = #{contact['id']}
+    ])
+
+  end
 
 end

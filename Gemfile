@@ -8,7 +8,8 @@ gem 'rails', '4.0.1'
 gem 'pg'
 
 group :development do
-  gem 'ruby-debug'
+  gem 'pry-rails'
+  gem 'pry-debugger'
   gem 'mysql2'
 end
 
