@@ -7,6 +7,11 @@ gem 'rails', '4.0.1'
 
 gem 'pg'
 
+group :development do
+  gem 'ruby-debug'
+  gem 'mysql2'
+end
+
 group :test do
 	gem 'sqlite3'
 end
